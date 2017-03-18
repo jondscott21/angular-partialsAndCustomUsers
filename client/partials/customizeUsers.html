@@ -1,0 +1,38 @@
+<div ng-controller="CustomizeUsersController as CUC">
+  <fieldset>
+    <legend>Users Controller</legend>
+    <form>
+      <div class="input-field">
+        <input class="validate" id="first_name" type="text" ng-model="CUC.user.first_name">
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field">
+        <input class="validate" id="last_name" type="text" ng-model="CUC.user.last_name">
+        <label for="last_name">Last Name</label>
+      </div>
+      <div class="input-field">
+        <input class="validate" id="lang" type="text" ng-model="CUC.user.favorite_language">
+        <label for="lang">Favorite Language</label>
+      </div>
+      <input type="submit" class="btn black right" value="Create User" ng-click="CUC.newUser()">
+    </form>
+    <table class="striped">
+      <thead>
+      <tr>
+        <th data-field="first_name">First Name</th>
+        <th data-field="last_name">Last Name</th>
+        <th data-field="lang">Fav Language</th>
+        <th data-field="actions">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="user in CUC.users">
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.favorite_language}}</td>
+        <td><input type="submit" class="btn red" value="Delete" ng-click="CUC.deleteUser(user)"></td>
+      </tr>
+      </tbody>
+    </table>
+  </fieldset>
+</div>

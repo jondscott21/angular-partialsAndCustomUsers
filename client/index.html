@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="static/CSS/materialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src='angular/angular.js'></script>
+  <script src = 'angular-route/angular-route.js'></script>
+  <script src="main.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <a href="#!/users" style="font-size: xx-large">Customize Users</a> <span style="font-size: xx-large">|</span> <a href="#!/list" style="font-size: xx-large">User List</a>
+  </div>
+<div ng-view=""></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<div ng-controller="UserListsController as ULC">
+  <table class="striped">
+    <thead>
+    <tr>
+      <th data-field="first_name">First Name</th>
+      <th data-field="last_name">Last Name</th>
+      <th data-field="lang">Fav Language</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in ULC.users">
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>{{user.favorite_language}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
